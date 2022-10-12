@@ -5,3 +5,8 @@ g++ -std=c++11 read.cpp addressbook.pb.cc -o read -L/usr/local/lib -lprotobuf
 [g++ 17]
 g++ -std=c++17 write.cpp addressbook.pb.cc -o write -L/usr/local/lib -lprotobuf
 g++ -std=c++17 read.cpp addressbook.pb.cc -o read -L/usr/local/lib -lprotobuf
+
+[Type]
+g++ -std=c++$VERSION $FILE $PB_CC -o $FILE_NAME -L/usr/local/lib -lprotobuf
+
+** $VERSION should be over 11.
