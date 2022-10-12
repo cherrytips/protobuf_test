@@ -1,3 +1,10 @@
+===== // Compile Command
+protoc -I=. --cpp_out=. ./addressbook.proto
+
+[Type]
+protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/$PB_FILE
+
+===== // Build Command
 [g++ 11]
 g++ -std=c++11 write.cpp addressbook.pb.cc -o write -L/usr/local/lib -lprotobuf
 g++ -std=c++11 read.cpp addressbook.pb.cc -o read -L/usr/local/lib -lprotobuf
